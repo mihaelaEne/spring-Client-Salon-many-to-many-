@@ -69,8 +69,8 @@ public class SalonService {
         if (salonOptional.isPresent()) {
             Salon salon = salonOptional.get();
 
-            if (!updateSalonRequest.getAdresa().equals("")) {
-                salon.setAdresa(updateSalonRequest.getAdresa());
+            if (!updateSalonRequest.getName().equals("")) {
+                salon.setName(updateSalonRequest.getName());
             }
 
             salonRepo.saveAndFlush(salon);
